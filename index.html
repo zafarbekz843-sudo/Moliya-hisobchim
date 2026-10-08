@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f9d58">
+  <title>Moliya Hisobchi</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <div class="eyebrow">SHAXSIY MOLIYA</div>
+        <h1>Assalomu alaykum, <span id="name">do‘st</span> 👋</h1>
+      </div>
+      <div class="avatar">₿</div>
+    </header>
+
+    <section class="balance-card">
+      <div class="label">Joriy balans</div>
+      <div id="balance" class="balance">0 so‘m</div>
+      <div class="balance-row">
+        <span>Daromad <b id="income">+0</b></span>
+        <span>Xarajat <b id="expense">-0</b></span>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button class="action income" id="incomeBtn"><span>＋</span><strong>Daromad</strong><small>Pul qo‘shish</small></button>
+      <button class="action expense" id="expenseBtn"><span>−</span><strong>Xarajat</strong><small>Pul sarflash</small></button>
+    </section>
+
+    <section class="section-head">
+      <h2>So‘nggi amallar</h2>
+      <button id="refresh" class="text-btn">Yangilash</button>
+    </section>
+
+    <section id="transactions" class="transactions">
+      <div class="empty">Ma’lumotlar yuklanmoqda…</div>
+    </section>
+
+    <section class="tip">
+      <div class="tip-icon">💡</div>
+      <div><b>Chatdan ham boshqarish mumkin</b><p>Botga “5000 oldim” deb yozing — daromad avtomatik qo‘shiladi.</p></div>
+    </section>
+  </main>
+
+  <dialog id="modal">
+    <form method="dialog" id="form">
+      <div class="modal-head"><h2 id="modalTitle">Daromad</h2><button type="button" id="close">×</button></div>
+      <label>Summa</label>
+      <input id="amount" inputmode="numeric" type="number" min="1" step="1" placeholder="50 000">
+      <label>Izoh</label>
+      <input id="note" maxlength="100" placeholder="Masalan: oylik">
+      <button class="save" type="submit">Saqlash</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
